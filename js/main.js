@@ -6,42 +6,44 @@
   'use strict';
 
   // --- Q&A Data for command bar typewriter ---
-  const qaData = [
+  var qaData = [
     {
-      q: 'How much fee is pending this month?',
-      a: '\u20B92,40,500 pending across 38 students. 3 are 30+ days overdue \u2014 want me to remind them?'
+      q: 'How much fee is pending for Class 8?',
+      a: '\u20B91,42,000 pending across 23 students. 5 are overdue by 30+ days. Want me to send WhatsApp reminders to their parents?'
     },
     {
-      q: 'Which students are weak in Math?',
-      a: '7 students are below 40%. Common gaps: fractions and word problems. I can group them for extra practice.'
+      q: 'Which students are weak in Maths?',
+      a: '7 students in Class 6 scored below 40%. Common gaps: fractions and word problems. I can group them for extra practice sessions.'
     },
     {
-      q: 'Send fee reminder to Class 5 on WhatsApp',
-      a: 'Reminder sent to 41 parents on WhatsApp. 12 have opened it already.'
+      q: 'Send fee reminder to all pending parents',
+      a: 'WhatsApp reminders sent to 41 parents with pending fees. 12 have already read the message. I\u2019ll notify you when payments come in.'
     },
     {
-      q: 'Show today\u2019s collection',
-      a: '\u20B958,200 collected today across 22 payments. That\u2019s 1.4\u00D7 yesterday.'
+      q: 'Show today\u2019s fee collection',
+      a: '\u20B958,200 collected today from 22 payments (18 UPI, 4 cash). That\u2019s 1.4\u00D7 more than yesterday. Total this month: \u20B96.2L.'
+    },
+    {
+      q: 'Generate fee report for June',
+      a: 'June report ready: \u20B96,24,500 collected, \u20B92,40,500 pending, 91% collection rate. Download as PDF or share on WhatsApp?'
     }
   ];
 
-  let qaIndex = 0;
-  let charIndex = 0;
-  let typing = true;
-  let typingTimeout = null;
-  const questionEl = document.getElementById('commandQuestion');
-  const answerEl = document.getElementById('commandAnswer');
+  var qaIndex = 0;
+  var charIndex = 0;
+  var typingTimeout = null;
+  var questionEl = document.getElementById('commandQuestion');
+  var answerEl = document.getElementById('commandAnswer');
 
   function typeQuestion() {
-    const current = qaData[qaIndex];
+    var current = qaData[qaIndex];
     if (charIndex <= current.q.length) {
       questionEl.textContent = current.q.slice(0, charIndex);
       charIndex++;
       typingTimeout = setTimeout(typeQuestion, 35);
     } else {
-      // Done typing question, show answer
       answerEl.textContent = current.a;
-      typingTimeout = setTimeout(nextQA, 3000);
+      typingTimeout = setTimeout(nextQA, 3500);
     }
   }
 
@@ -57,13 +59,13 @@
   if (questionEl && answerEl) {
     answerEl.textContent = qaData[0].a;
     questionEl.textContent = qaData[0].q;
-    typingTimeout = setTimeout(nextQA, 3000);
+    typingTimeout = setTimeout(nextQA, 3500);
   }
 
   // --- Mobile Menu ---
-  const menuBtn = document.getElementById('menuBtn');
-  const mainNav = document.getElementById('mainNav');
-  let overlay = null;
+  var menuBtn = document.getElementById('menuBtn');
+  var mainNav = document.getElementById('mainNav');
+  var overlay = null;
 
   function createOverlay() {
     overlay = document.createElement('div');
@@ -95,8 +97,7 @@
 
   if (menuBtn) {
     menuBtn.addEventListener('click', function () {
-      var isOpen = mainNav.classList.contains('open');
-      isOpen ? closeMenu() : openMenu();
+      mainNav.classList.contains('open') ? closeMenu() : openMenu();
     });
   }
 
@@ -107,7 +108,7 @@
     });
   }
 
-  // Close menu on Escape
+  // Close on Escape
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && mainNav && mainNav.classList.contains('open')) {
       closeMenu();
@@ -125,7 +126,6 @@
         var headerOffset = 72;
         var targetPos = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
         window.scrollTo({ top: targetPos, behavior: 'smooth' });
-        // Update URL without jump
         history.pushState(null, '', targetId);
       }
     });
@@ -143,34 +143,30 @@
           }
         });
       },
-      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
     );
 
     revealElements.forEach(function (el) {
       revealObserver.observe(el);
     });
   } else {
-    // Fallback: show all
     revealElements.forEach(function (el) {
       el.classList.add('visible');
     });
   }
 
-  // --- Header scroll behavior ---
+  // --- Header scroll effect ---
   var header = document.getElementById('header');
-  var lastScroll = 0;
 
   if (header) {
     window.addEventListener(
       'scroll',
       function () {
-        var currentScroll = window.pageYOffset;
-        if (currentScroll > 100) {
+        if (window.pageYOffset > 100) {
           header.style.background = 'rgba(20, 18, 14, 0.97)';
         } else {
           header.style.background = 'rgba(20, 18, 14, 0.92)';
         }
-        lastScroll = currentScroll;
       },
       { passive: true }
     );
