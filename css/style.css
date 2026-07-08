@@ -1069,6 +1069,10 @@ strong {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24px;
   }
+
+  .features-grid--full {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .feature-card {
