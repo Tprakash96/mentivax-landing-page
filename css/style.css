@@ -887,29 +887,16 @@ strong {
   line-height: 1.5;
 }
 
-/* --- Command Demo Section --- */
-.command-demo-section {
-  padding: var(--section-padding);
-  background: var(--color-bg-dark);
-  color: var(--color-text-light);
-}
-
-.command-demo-section .section-label {
-  color: var(--color-purple);
-}
-
-.command-demo-section .section-title {
-  color: var(--color-text-light);
-}
-
-.command-demo-section .section-desc {
-  color: var(--color-text-light-muted);
-}
-
-/* --- Command Bar --- */
+/* --- Command Bar (inside hero) --- */
 .command-bar-wrap {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 40px auto 0;
+}
+
+@media (min-width: 768px) {
+  .command-bar-wrap {
+    margin-top: 48px;
+  }
 }
 
 .command-bar {
@@ -1770,7 +1757,6 @@ strong {
   }
 
   .hero,
-  .command-demo-section,
   .cta {
     background: #fff;
     color: #000;
