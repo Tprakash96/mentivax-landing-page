@@ -1742,6 +1742,18 @@ strong {
   top: 10px;
 }
 
+/* --- Why Mentivax --- */
+.why-mentivax {
+  padding: 56px 20px;
+  background: var(--color-bg-light);
+}
+
+@media (min-width: 768px) {
+  .why-mentivax {
+    padding: 80px 40px;
+  }
+}
+
 /* --- Nav active state --- */
 .nav-active {
   color: var(--color-text-light) !important;
