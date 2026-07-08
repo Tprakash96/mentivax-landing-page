@@ -1742,6 +1742,103 @@ strong {
   top: 10px;
 }
 
+/* --- Compatibility Banner --- */
+.compat-banner {
+  padding: 56px 20px;
+  background: var(--color-bg-dark);
+}
+
+@media (min-width: 768px) {
+  .compat-banner {
+    padding: 80px 40px;
+  }
+}
+
+.compat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  background: var(--color-surface-dark);
+  border: 1px solid rgba(124, 108, 255, 0.2);
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .compat-card {
+    flex-direction: row;
+    padding: 40px 36px;
+    gap: 32px;
+    align-items: flex-start;
+  }
+}
+
+.compat-card::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(124, 108, 255, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.compat-icon {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(124, 108, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-purple);
+}
+
+.compat-title {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3.5vw, 28px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text-light);
+  margin-bottom: 12px;
+}
+
+.compat-desc {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--color-text-light-muted);
+  margin-bottom: 20px;
+}
+
+.compat-desc strong {
+  color: var(--color-text-light);
+}
+
+.compat-points {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.compat-point {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--color-text-light-dim);
+}
+
+.compat-point svg {
+  flex: none;
+  color: var(--color-green);
+}
+
 /* --- Why Mentivax --- */
 .why-mentivax {
   padding: 56px 20px;
