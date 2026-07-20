@@ -4,8 +4,8 @@
   "description": "AI-powered school management. Ask in plain words — get answers on fees, records, and reports in seconds.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#14120E",
-  "theme_color": "#14120E",
+  "background_color": "#0F1B34",
+  "theme_color": "#0F1B34",
   "orientation": "portrait-primary",
   "icons": [
     {

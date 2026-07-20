@@ -4,27 +4,28 @@
 
 /* --- Design Tokens --- */
 :root {
-  --color-bg-dark: #14120E;
-  --color-bg-light: #F6F4EF;
+  --color-bg-dark: #0F1B34;
+  --color-bg-light: #EEF3FB;
   --color-bg-white: #fff;
-  --color-text-primary: #1A1813;
-  --color-text-secondary: #5C584F;
-  --color-text-muted: #9b968d;
-  --color-text-light: #F6F4EF;
-  --color-text-light-muted: #C7C3BB;
-  --color-text-light-dim: #B8B4AC;
-  --color-text-light-faint: #6E6A62;
-  --color-purple: #7C6CFF;
-  --color-purple-deep: #5B47E0;
+  --color-text-primary: #10192B;
+  --color-text-secondary: #4A5568;
+  --color-text-muted: #8A93A6;
+  --color-text-light: #EEF3FB;
+  --color-text-light-muted: #B9C3D9;
+  --color-text-light-dim: #A7B2CC;
+  --color-text-light-faint: #6B7793;
+  --color-purple: #2563EB;
+  --color-purple-deep: #1E3A8A;
   --color-green: #1E9E6A;
   --color-red: #D9483B;
-  --color-yellow: #FFE27A;
+  --color-yellow: #FBBF24;
+  --color-amber: #F59E0B;
   --color-wa-green: #25D366;
-  --color-border: #E7E3DA;
-  --color-border-light: #E2DED4;
-  --color-border-dark: #322e26;
-  --color-surface-dark: #1F1C16;
-  --color-surface-dark-alt: #26231d;
+  --color-border: #DCE4F0;
+  --color-border-light: #E4EAF4;
+  --color-border-dark: #26355A;
+  --color-surface-dark: #17233F;
+  --color-surface-dark-alt: #1E2C4A;
   --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
   --font-display: 'Space Grotesk', 'DM Sans', system-ui, sans-serif;
   --font-mono: 'DM Mono', ui-monospace, 'SFMono-Regular', monospace;
@@ -156,23 +157,23 @@ strong {
 }
 
 .btn-primary:hover {
-  box-shadow: 0 4px 20px rgba(124, 108, 255, 0.4);
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
 }
 
 .btn-outline {
   background: transparent;
   color: var(--color-text-light);
-  border: 1px solid #3a352c;
+  border: 1px solid #2E3D5E;
 }
 
 .btn-outline:hover {
-  border-color: #5a554c;
+  border-color: #455579;
 }
 
 .btn-outline-hero {
   background: transparent;
   color: var(--color-text-light-muted);
-  border: 1px solid #3a352c;
+  border: 1px solid #2E3D5E;
 }
 
 .btn-outline-hero:hover {
@@ -187,7 +188,7 @@ strong {
 
 .btn-ghost {
   background: var(--color-surface-dark-alt);
-  color: #cfc9bd;
+  color: #C2CBDE;
 }
 
 .btn-sm {
@@ -222,7 +223,7 @@ strong {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(20, 18, 14, 0.92);
+  background: rgba(15, 27, 52, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -258,6 +259,17 @@ strong {
   font-size: 14px;
   font-weight: 700;
   color: var(--color-bg-dark);
+}
+
+/* Brand logo image (open-book mark) */
+.logo-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #fff;
+  object-fit: contain;
+  padding: 2px;
+  flex: none;
 }
 
 /* Mobile menu button */
@@ -918,10 +930,10 @@ strong {
 
 @keyframes mvGlow {
   0%, 100% {
-    box-shadow: 0 0 0 1px rgba(124, 108, 255, 0.35), 0 0 34px -8px rgba(124, 108, 255, 0.55);
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.35), 0 0 34px -8px rgba(37, 99, 235, 0.55);
   }
   50% {
-    box-shadow: 0 0 0 1px rgba(124, 108, 255, 0.6), 0 0 54px -6px rgba(124, 108, 255, 0.8);
+    box-shadow: 0 0 0 1px rgba(37, 99, 235, 0.6), 0 0 54px -6px rgba(37, 99, 235, 0.8);
   }
 }
 
@@ -929,7 +941,7 @@ strong {
   width: 28px;
   height: 28px;
   border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, #7C6CFF, #9d7bff);
+  background: linear-gradient(135deg, #2563EB, #1E3A8A);
   flex: none;
 }
 
@@ -979,8 +991,8 @@ strong {
   display: flex;
   gap: 12px;
   margin-top: 14px;
-  background: rgba(124, 108, 255, 0.08);
-  border: 1px solid rgba(124, 108, 255, 0.22);
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.22);
   border-radius: var(--radius-lg);
   padding: 16px 18px;
   text-align: left;
@@ -1305,7 +1317,7 @@ strong {
 
 .benefit-card:hover {
   border-color: var(--color-purple);
-  box-shadow: 0 4px 16px rgba(124, 108, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.08);
 }
 
 .benefit-card--cta {
@@ -1766,7 +1778,7 @@ strong {
   margin: 0 auto;
   padding: 32px 24px;
   background: var(--color-surface-dark);
-  border: 1px solid rgba(124, 108, 255, 0.2);
+  border: 1px solid rgba(37, 99, 235, 0.2);
   border-radius: 18px;
   position: relative;
   overflow: hidden;
@@ -1788,7 +1800,7 @@ strong {
   right: -60px;
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(124, 108, 255, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -1797,7 +1809,7 @@ strong {
   width: 56px;
   height: 56px;
   border-radius: 14px;
-  background: rgba(124, 108, 255, 0.12);
+  background: rgba(37, 99, 235, 0.12);
   display: flex;
   align-items: center;
   justify-content: center;

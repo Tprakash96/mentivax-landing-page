@@ -1,4 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="8" fill="#7C6CFF"/>
-  <text x="16" y="23" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#14120E" text-anchor="middle">M</text>
+  <rect width="32" height="32" rx="8" fill="#1E3A8A"/>
+  <!-- open book: two pages -->
+  <path d="M16 9.5 8 11v12l8-1.5z" fill="#ffffff"/>
+  <path d="M16 9.5 24 11v12l-8-1.5z" fill="#2563EB"/>
+  <!-- amber bookmark -->
+  <path d="M14.6 9.1h2.8v6.1l-1.4-1.2-1.4 1.2z" fill="#F59E0B"/>
 </svg>
