@@ -163,9 +163,9 @@
       'scroll',
       function () {
         if (window.pageYOffset > 100) {
-          header.style.background = 'rgba(20, 18, 14, 0.97)';
+          header.style.background = 'rgba(15, 27, 52, 0.97)';
         } else {
-          header.style.background = 'rgba(20, 18, 14, 0.92)';
+          header.style.background = 'rgba(15, 27, 52, 0.92)';
         }
       },
       { passive: true }

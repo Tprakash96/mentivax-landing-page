@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mentivax-v2';
+const CACHE_NAME = 'mentivax-v3';
 const ASSETS = [
   '/',
   '/index.html',
