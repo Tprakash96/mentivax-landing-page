@@ -1917,15 +1917,18 @@ strong {
 
 /* Page Hero */
 .page-hero {
-  background: var(--color-bg-dark);
+  background:
+    radial-gradient(ellipse 62% 60% at 50% -5%, rgba(37, 99, 235, 0.26), transparent 70%),
+    radial-gradient(ellipse 40% 40% at 88% 20%, rgba(37, 99, 235, 0.10), transparent 70%),
+    var(--color-bg-dark);
   color: var(--color-text-light);
-  padding: 110px 20px 64px;
+  padding: 104px 20px 56px;
   text-align: center;
 }
 
 @media (min-width: 768px) {
   .page-hero {
-    padding: 130px 40px 80px;
+    padding: 116px 40px 68px;
   }
 }
 
@@ -1990,9 +1993,10 @@ strong {
 
 .about-heading {
   font-family: var(--font-display);
-  font-size: clamp(26px, 4vw, 36px);
+  font-size: clamp(23px, 3.2vw, 31px);
+  line-height: 1.15;
   letter-spacing: -0.02em;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   color: var(--color-text-primary);
 }
 
